@@ -126,8 +126,13 @@ public class Application {
                     break;
                 }
 
+                case 7: {
+                    System.out.println("Library size: " + library.size());
+                    library.forEach(System.out::println);
+                    break;
+                }
 
-                case 7:
+                case 8:
                     System.out.println("Exiting");
                     return;
                 default:
@@ -149,7 +154,8 @@ public class Application {
             System.out.println("4. Search by author");
             System.out.println("5. Save the library on file");
             System.out.println("6. Load the library from file");
-            System.out.println("7. Exit");
+            System.out.println("7. Display the library");
+            System.out.println("8. Exit");
 
 
             String option = scanner.nextLine();
