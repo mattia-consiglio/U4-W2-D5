@@ -1,6 +1,5 @@
 TODO:
-- Book: add random book
-- Magazine: add random magazine
+
 
 DONE:
 - Book: add book
@@ -11,3 +10,5 @@ DONE:
 - Search elements by author
 - Write library to file
 - Read library from file
+- Book: add random book
+- Magazine: add random magazine

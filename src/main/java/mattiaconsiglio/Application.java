@@ -61,9 +61,9 @@ public class Application {
             switch (mainMenu(scanner)) {
                 case 1: {
                     if (chooseElement(scanner, "add") == 1) {
-                        Book.add(library, scanner);
+                        Book.add(library, scanner, bookLibrarySupplier);
                     } else {
-                        Magazine.add(library, scanner);
+                        Magazine.add(library, scanner, magazineLibrarySupplier);
                     }
                     break;
                 }
