@@ -98,12 +98,12 @@ public class Book extends AbstractBook {
     @Override
     public String toString() {
         return "Book{" +
-                "author='" + author + '\'' +
-                ", genre='" + genre + '\'' +
-                ", isbn=" + isbn +
+                "isbn=" + isbn +
                 ", title='" + title + '\'' +
                 ", publishYear=" + publishYear +
                 ", pages=" + pages +
+                ", author='" + author + '\'' +
+                ", genre='" + genre + '\'' +
                 '}';
     }
 }

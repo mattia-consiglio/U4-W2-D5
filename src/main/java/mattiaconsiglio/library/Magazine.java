@@ -87,11 +87,11 @@ public class Magazine extends AbstractBook<Magazine> {
     @Override
     public String toString() {
         return "Magazine{" +
-                "periodicity=" + periodicity +
-                ", isbn=" + isbn +
+                "isbn=" + isbn +
                 ", title='" + title + '\'' +
                 ", publishYear=" + publishYear +
                 ", pages=" + pages +
+                ", periodicity=" + periodicity +
                 '}';
     }
 }
