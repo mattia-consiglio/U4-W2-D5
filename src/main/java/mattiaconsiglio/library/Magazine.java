@@ -16,14 +16,14 @@ public class Magazine extends AbstractBook<Magazine> {
 
 
     public static void add(Set<AbstractBook> library, Scanner scanner) {
-        int isbn = askAndVerifyInt("Insert book ISBN", scanner, 1000_000_000, LocalDate.now().getYear() + 1);
+        int isbn = askAndVerifyInt("Insert book ISBN (8 digits)", scanner, 10_000_000, 99_999_999);
 
         while (true) {
 
             int finalIsbn = isbn;
             if (library.stream().anyMatch(book -> book.getIsbn() == finalIsbn)) {
                 System.err.println("Error: ISBN already present in the library");
-                isbn = askAndVerifyInt("Insert book ISBN", scanner, 1000_000_000, LocalDate.now().getYear() + 1);
+                isbn = askAndVerifyInt("Insert book ISBN", scanner, 10_000_000, 99_999_999);
             } else {
                 break;
             }
@@ -32,7 +32,7 @@ public class Magazine extends AbstractBook<Magazine> {
         System.out.println("Insert book title:");
         String tile = scanner.nextLine();
 
-        int year = askAndVerifyInt("Insert book publish year", scanner, 1900, 2024);
+        int year = askAndVerifyInt("Insert book publish year", scanner, 1900, LocalDate.now().getYear() + 1);
 
         int pages = askAndVerifyInt("Insert book pages", scanner, 1, 10000);
         Periodicity periodicity;
@@ -45,8 +45,15 @@ public class Magazine extends AbstractBook<Magazine> {
         int n = askAndVerifyInt("Insert periodicity number", scanner, 1, Periodicity.values().length);
         periodicity = Periodicity.values()[n - 1];
 
+        Magazine magazine = new Magazine(isbn, tile, year, pages, periodicity);
+        library.add(magazine);
 
-        library.add(new Magazine(isbn, tile, year, pages, periodicity));
+        System.out.println("Magazine added!");
+        System.out.println(magazine);
+    }
+
+    public Periodicity getPeriodicity() {
+        return periodicity;
     }
 
     @Override

@@ -1,2 +1,13 @@
+TODO:
 - Book: add random book
 - Magazine: add random magazine
+
+DONE:
+- Book: add book
+- Magazine: add magazine
+- Remove elements from list
+- Search elements by ISBN
+- Search elements by publish year
+- Search elements by author
+- Write library to file
+- Read library from file
