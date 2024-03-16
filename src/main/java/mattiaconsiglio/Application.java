@@ -161,7 +161,7 @@ public class Application {
             String option = scanner.nextLine();
 
             switch (option) {
-                case "1", "2", "3", "4", "5", "6", "7": {
+                case "1", "2", "3", "4", "5", "6", "7", "8": {
                     return Integer.parseInt(option);
                 }
                 default:
